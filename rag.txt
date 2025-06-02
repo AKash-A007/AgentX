@@ -1,0 +1,32 @@
+Retrieval-Augmented Generation (RAG) is a technique that enhances Large Language Models (LLMs) by allowing them to consult an external, authoritative knowledge base before generating a response. This addresses common LLM limitations such as producing false, outdated, generic, or inaccurate information.
+
+
+Here's a summary of RAG:
+
+What it is:
+
+RAG optimizes LLM output by having the model retrieve relevant information from a specified knowledge base (outside its original training data) before generating a response.
+It's a cost-effective way to improve LLM accuracy, relevance, and usefulness for specific domains or internal organizational knowledge.
+Why it's important:
+
+Addresses LLM challenges: LLMs can "hallucinate" (present false information), provide outdated data due to static training sets, or use non-authoritative sources. RAG mitigates these by directing the LLM to trusted sources.
+
+Enhances reliability: It helps LLMs provide current, accurate, and specific responses, improving user trust.
+Benefits of RAG:
+
+Cost-effective: Avoids the high computational and financial costs of retraining LLMs for new or domain-specific data.
+Current information: Allows LLMs to access the latest research, news, or real-time data feeds.
+Enhanced user trust: Provides accurate information with source attribution (citations/references), enabling users to verify details.
+More developer control: Developers can manage information sources, restrict sensitive data access, troubleshoot inaccuracies, and adapt to changing requirements.
+How RAG works:
+
+Create external data: External data (from APIs, databases, documents) is converted into numerical representations (embeddings) and stored in a vector database, forming a "knowledge library."
+Retrieve relevant information: When a user queries, the query is also converted to a vector and matched with the vector database to find highly relevant documents or passages.
+Augment the LLM prompt: The retrieved relevant data is added to the original user query (prompt), providing context for the LLM.
+Generate response: The LLM uses this augmented prompt, combining the new knowledge with its existing training data, to generate a more accurate and informed response.
+Update external data: The external data and its embeddings are asynchronously updated to ensure the information remains current.
+RAG vs. Semantic Search:
+
+Semantic search enhances RAG, especially for large knowledge bases. While conventional keyword search in RAG can be limited, semantic search technologies more accurately scan vast, disparate information, 
+returning precisely relevant passages (not just search results). 
+ simplifies knowledge base preparation for developers and maximizes RAG output quality.
